@@ -1,0 +1,22 @@
+{
+	"name": "DS_JSON_PARQ",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_JSON_PARQ",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "jsontest.json",
+				"folderPath": "json",
+				"fileSystem": "input"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,57 @@
+{
+	"name": "DS_rest_adls",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_rest_adls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@concat(\n    'api/',\n    formatDateTime(utcNow(),'yyyy'),'/',\n    formatDateTime(utcNow(),'MM'),'/',\n    formatDateTime(utcNow(),'dd'),'/'\n)",
+					"type": "Expression"
+				},
+				"fileSystem": "input"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "order_id",
+				"type": "UTF8"
+			},
+			{
+				"name": "customer_id",
+				"type": "UTF8"
+			},
+			{
+				"name": "order_status",
+				"type": "UTF8"
+			},
+			{
+				"name": "order_purchase_timestamp",
+				"type": "INT96"
+			},
+			{
+				"name": "order_approved_at",
+				"type": "INT96"
+			},
+			{
+				"name": "order_delivered_carrier_date",
+				"type": "INT96"
+			},
+			{
+				"name": "order_delivered_customer_date",
+				"type": "INT96"
+			},
+			{
+				"name": "order_estimated_delivery_date",
+				"type": "INT96"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

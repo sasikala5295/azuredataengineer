@@ -1,0 +1,15 @@
+{
+	"name": "ADF-VB1823B-ETL-DEV",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a2fb7f74-00d5-43a3-ba7f-2ec9ddf38f25",
+		"tenantId": "b03eeb6a-bc3c-4659-ba10-3c9121ea465f"
+	}
+}
